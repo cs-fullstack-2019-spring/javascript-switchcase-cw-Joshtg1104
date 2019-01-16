@@ -9,24 +9,40 @@
 
 function main() {
 
- var atten = [];
+    var atten = [];
 
- var checkIn = prompt('Is a teacher, student, or parent checking in?');
+    // for (var x = 1; x <= 5; x++) {
+    while(checkIn !== 'q'){
+        var checkIn = prompt('Is a teacher, student, or parent checking in?');
 
- switch(checkIn){
-     case "teacher":
-     case "Teacher":
-         atten.push("teacher");
-         break;
-     case "student":
-     case "Student"
-         atten.push("student");
-         break;
-     case "parent":
-     case "Parent":
-         atten.push("parent");
-         break;
- }
-
+        switch (checkIn) {
+            case "teacher":
+            case "Teacher":
+                atten.push("teacher");
+                console.log(atten);
+                // console.log("teacher");
+                break;
+            case "student":
+            case "Student":
+                atten.push("student");
+                console.log(atten);
+                // console.log("student");
+                break;
+            case "parent":
+            case "Parent":
+                atten.push("parent");
+                console.log(atten);
+                // console.log("parent");
+                break;
+            default:
+                if(checkIn === 'q'){
+                    console.log("Entries registered.");
+                }
+                else{
+                    console.log('Sorry, not a valid entry.');
+                }
+        }
+    }
 }
+
 main();
